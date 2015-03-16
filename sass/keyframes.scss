@@ -1,0 +1,158 @@
+@charset "utf-8";
+
+@import "base.scss";
+
+/* 向下箭头动画 */
+@include keyframes(scaleBtn) {
+	50% {
+		#{$browser}transform: scale(0.8);
+	}
+	60% {
+		#{$browser}transform: scale(0.95);
+	}
+	65% {
+		#{$browser}transform: scale(0.6);
+	}
+	70% {
+		#{$browser}transform: scale(0.8);
+	}
+	100% {
+		#{$browser}transform: scale(0.8);
+	}
+}
+@include keyframes(rotateDeg) {
+	0%{
+		#{$browser}transform:rotate(0deg);
+	}
+	100% {
+		#{$browser}transform:rotate(360deg);
+	}
+}
+/* 隐藏loading */
+@include keyframes(loadHide) {
+	0%{
+		#{$browser}transform:translateY(0);
+	}
+	60% {
+		#{$browser}transform:translateY(-120%);
+	}
+	100% {
+		opacity:0;
+		#{$browser}transform:translateY(-120%);
+	}
+}
+/* 向上移动 */
+@include keyframes(fadeInUp) {
+	0% {
+		opacity: 0;
+		#{$browser}transform: translateY(10px);
+	}
+	100% {
+		opacity: 1;
+		#{$browser}transform: none;
+	}
+}
+/* 向下移动 */
+@include keyframes(fadeInDown) {
+	0% {
+		opacity: 0;
+		#{$browser}transform: translateY(-10px);
+	}
+	100% {
+		opacity: 1;
+		#{$browser}transform: none;
+	}
+}
+// 圆点导航动画
+@include keyframes(bounceIn) {
+	0% {
+		#{$browser}transform: scale(1);
+	}
+	50% {
+		#{$browser}transform: scale(.9);
+	}
+	100% {
+		#{$browser}transform: scale(1);
+	}
+}
+// 第二屏图标动画
+@include keyframes(rubberBand) {
+	0% {
+    	#{$browser}transform: scale(1, 1);
+	}
+	30% {
+		opacity:1;
+	    #{$browser}transform: scale(1.25, 0.75);
+	}
+	40% {
+	    #{$browser}transform: scale(0.75, 1.25);
+	}
+	50% {
+	    #{$browser}transform: scale(1.15, 0.85);
+	}
+	65% {
+	    #{$browser}transform: scale(.95, 1.05);
+	}
+	75% {
+	    #{$browser}transform: scale(1.05, .95);
+	}
+	100% {
+		opacity:1;
+	    #{$browser}transform: scale(1, 1);
+	}
+}
+// 第二屏文字动画
+@include keyframes(bounceInRight) {
+	0% {
+		opacity: 0;
+		#{$browser}transform: translateX(100%);
+	}
+	100% {
+		opacity: 1;
+		#{$browser}transform: none;
+	}
+}
+@include keyframes(fadeInRight) {
+	0% {
+		opacity: 0;
+		#{$browser}transform: translateX(20px);
+	}
+	100% {
+		opacity: 1;
+		#{$browser}transform: none;
+	}
+}
+// 第三屏技能介绍
+@include keyframes(fadeInLeft) {
+	0% {
+		opacity: 0;
+		#{$browser}transform: translateX(-20px);
+	}
+	100% {
+		opacity: 1;
+		#{$browser}transform: none;
+	}
+}
+// 第三屏技能图
+@include keyframes(fadeIn) {
+	0% {
+		opacity:0;
+	}
+	100% {
+		opacity:1;
+	}
+}
+// 第五屏图片旋转
+@include keyframes(rotateIn) {
+	0% {
+		#{$browser}transform-origin: center;
+	   	#{$browser}transform: rotate(-180deg);
+	    opacity: 0;
+	}
+	100% {
+		#{$browser}transform-origin: center;
+	   	#{$browser}transform: none;
+	    opacity: 1;
+
+	}
+}

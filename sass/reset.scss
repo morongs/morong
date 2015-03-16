@@ -1,0 +1,68 @@
+@charset "utf-8";
+
+body, dl, dd, h1, h2, h3, h4, h5, h6, p, form, figure, figcaption {
+	margin:0px;
+}
+ul, ol {
+	list-style:none;
+	margin:0px;
+	padding:0px;
+}
+html {
+	font-size:625%;
+}
+body {
+	font:.14rem/1.5 $font;
+	width:100%;
+	color: $color;
+	background:$bg;
+}
+h1,h2,h3,h4,h5,h6 {
+	font-weight:normal;
+}
+/* 清除点击出现虚拟框 */
+a{
+	outline:none;
+	text-decoration:none;
+	-webkit-tap-highlight-color:rgba(255,0,0,0);
+	&:focus{
+		outline:0;
+	}
+	&:link, 
+	&:visited {
+		color: $color;
+		text-decoration:none;
+	}
+}
+a img {
+	border:none;
+}
+input, textarea, select {
+	outline:none;
+	font-family: $font;
+}
+/* 清除浮动 */
+.clearfix {
+	*zoom:1;
+	&:after {
+		display:block;
+		content:"\200B";
+		clear:both;
+		height:0;
+	}
+}
+.w960 {
+	width:960px;
+	margin:0 auto;
+}
+
+/*字体图标*/
+@font-face {font-family: 'icons';
+    src: url('../font/icons.eot'); /* IE9*/
+    src: url('../font/icons.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('../font/icons.woff') format('woff'), /* chrome、firefox */
+    url('../font/icons.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+    url('../font/icons.svg#../font/icons') format('svg'); /* iOS 4.1- */
+    font-weight:normal;
+	font-style:normal;
+}

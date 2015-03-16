@@ -1,0 +1,101 @@
+@charset "utf-8";
+
+// 变量存储
+// 字体Unicode编码 微软雅黑:\5FAE\8F6F\96C5\9ED1 , 宋体:\5B8B\4F53
+$font: '\5FAE\8F6F\96C5\9ED1', '\5B8B\4F53', arial;
+$fontIcon: 'icons';
+$height: 100%;			// 高度
+$color: #333;		// 默认颜色
+$bg: #f0f0f0;		// 背景颜色
+$white: #fff;		// 白色
+$shadow: #07759F;	// 阴影颜色
+$aboutColor: #dedede;	// 关于颜色
+$padding: 75px 0 30px;	// 主要内容间距
+$navcolor1: #FF6158; // 导航背景(主页)
+$navcolor2: #D37E4C; // 导航背景(简介)
+$navcolor3: #F9A123; // 导航背景(案例)
+$navcolor4: #F27D88; // 导航背景(记录)
+$navcolor5: #80B383; // 导航背景(经验)
+$navcolor6: #3AA59C; // 导航背景(联系)
+$browser: null;
+
+// 设置高度,用于多地方使用
+%height {
+	height: 100%;
+}
+%display {
+	display:inline-block;
+	*display:inline;
+	*zoom:1;
+}
+%box-sizing {
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	-o-box-sizing:border-box;
+	box-sizing:border-box;
+}
+
+// 设置动画名称
+@mixin animation($aniName) {
+	-webkit-animation:$aniName;
+	-moz-animation:$aniName;
+	-o-animation:$aniName;
+	animation:$aniName;
+}
+// 设置延迟执行时间
+@mixin animation-delay($time) {
+	-webkit-animation-delay:$time;
+	-moz-animation-delay:$time;
+	-o-animation-delay:$time;
+	animation-delay:$time;
+}
+// 设置阴影
+@mixin box-shadow($shadow...) {
+	-webkit-box-shadow:$shadow;
+	-moz-box-shadow:$shadow;
+	-o-box-shadow:$shadow;
+	box-shadow:$shadow;
+}
+// 圆角
+@mixin border-radius($radius) {
+	-webkit-border-radius:$radius;
+	-moz-border-radius:$radius;
+	-o-border-radius:$radius;
+	border-radius:$radius;
+}
+// 设置过渡
+@mixin transition($transition...) {
+	-webkit-transition:$transition;
+	-moz-transition:$transition;
+	-o-transition:$transition;
+	transition:$transition;
+}
+// 设置旋转位置
+@mixin transform-origin($origin...) {
+	-webkit-transform-origin:$origin;
+	-moz-transform-origin:$origin;
+	-o-transform-origin:$origin;
+	transform-origin:$origin;
+}
+@mixin transform($transform...) {
+	-webkit-transform:$transform;
+	-moz-transform:$transform;
+	-o-transform:$transform;
+	transform:$transform;
+}
+
+// 设置关键帧
+@mixin keyframes($name) {
+	@-webkit-keyframes #{$name} {
+	    $browser: '-webkit-'; @content;
+	}
+	@-moz-keyframes #{$name} {
+	    $browser: '-moz-'; @content;
+	}
+	@-o-keyframes #{$name} {
+	    $browser: '-o-'; @content;
+	}
+	@keyframes #{$name} {
+	    $browser: ''; @content;
+	}
+}

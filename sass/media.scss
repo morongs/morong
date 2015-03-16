@@ -1,0 +1,224 @@
+@charset "utf-8";
+
+/* 屏幕小于1170px时使用此样式 */
+@media only screen and (max-width:1170px) {
+	.main_info section {
+		width:100%;
+	}
+	/* 联系我们发送邮箱 */
+	.form p {
+		&.form_width .form_txt {
+			width:68%;
+		}
+		.form_txt, .form_textarea {
+			width:83%;
+		}
+	}
+}
+/* 屏幕小于1030px时使用此样式 */
+@media only screen and (max-width:1030px) {
+	.form p.form_width {
+		width:100%;
+		margin-right:0;
+		.form_txt {
+			width:83%;
+		}
+	}
+}
+/* 屏幕小于980px时使用此样式 */
+@media only screen and (max-width:980px) {
+	.about .exper li {
+		width:50%;
+	}
+	.form p, .form p.form_width {
+		.form_txt, .form_textarea {
+			width:79.8%;
+		}
+	}
+}
+/* 屏幕小于845px时使用此样式 */
+@media only screen and (max-width:845px) {
+	.index_con li {
+		width:480px;
+		.index_pic {
+			float:none;
+			margin:0 auto;
+		}
+	}
+	/* 联系我们发送邮箱 */
+	.form p, .form p.form_width {
+		label {
+			display:block;
+			text-align:left;
+			&.label_con {
+				float:none;
+			}
+		}
+		.form_txt, .form_textarea {
+			width:100%;
+			-webkit-box-sizing:border-box;
+			-moz-box-sizing:border-box;
+			-ms-box-sizing:border-box;
+			-o-box-sizing:border-box;
+			box-sizing:border-box;
+		}
+	}
+	.prompt {
+		top:65%;
+	}
+}
+/* 屏幕小于768px时使用此样式 */
+@media only screen and (max-width:768px) {
+	.box_main {
+		width:430px;
+		margin-top:14%;
+	}
+	.box_pic {
+		width:160px;
+		height:160px;
+		background-size:100% auto;
+	}
+	.box_txt {
+		margin-left:190px;
+		h1 {
+			font-size:3.375em;
+			line-height:75px;
+			padding-top:0;
+			margin-bottom:2px;
+			span {
+				display:block; 
+				font-size:.333em;
+				margin-top:-20px;
+			}
+		}
+	}
+}
+/* 屏幕小于700px时使用此样式 */
+@media only screen and (max-width:700px) {
+	.about .exper li {
+		width:100%;
+	}
+}
+/* 屏幕小于650px时使用此样式 */
+@media only screen and (max-width:650px) {
+	.box_main {
+		margin-top:22%;
+	}
+	.loading {
+		margin-top:60px;
+	}
+	.main {
+		margin:0 10px 0 100px;
+	}
+	.index_con {
+		padding:50px 0 40px;
+		li {
+			width:350px;
+			h2 {
+				font-size:1.25em;
+			}
+			p {
+				font-size:1em;
+			}
+		}
+	}
+	/* 个人简历页面 */
+	.main_info h2 {
+		font-size:1.125em;
+	}
+	.about {
+		section li {
+			width:100%;
+			font-size:.875em;
+			line-height:22px;
+		}
+		section ul, section ol {
+			margin:10px 20px;
+		}
+	}
+}
+/* 屏幕小于500px时使用此样式 */
+@media only screen and (max-width:500px) {
+	.index_con li {
+		width:280px;
+		margin-bottom:10px;
+		h2 {
+			font-size:1em;
+		}
+		p {
+			font-size:.875em;
+		}
+	}
+	/* 联系页面链接按钮 */
+	.contact_link li {
+		width:50%;
+	}
+}
+
+/* 屏幕小于430px时使用此样式 */
+@media only screen and (max-width:430px) {
+	.main {
+		margin:0 5px 0 85px;
+	}
+	.box_main {
+		width:320px;
+		margin-top:20%;
+	}
+	.box_pic {
+		width:120px;
+		height:120px;
+	}
+	.box_txt {
+		margin-left:140px;
+		padding-top:5px;
+		h1 {
+			font-size:3.125em;
+			span {
+				display:block;
+				font-size:0.36em;
+				margin-top:-12px;
+			}
+		}
+		p {
+			width:320px;
+			text-align:center;
+			margin-left:-140px;
+		}
+	}
+	.loading {
+		margin-top:40px;
+	}
+	/* 导航 */
+	.nav {
+		width:180px;
+		left:-102px;
+		li a:hover {
+			left:102px;
+		}
+		span {
+			width:162px;
+			padding-left:18px;
+			&:after {
+				right:18px;
+			}
+		}
+	}
+	/* 右边内容 */
+	.index_con li {
+		width:100%;
+		min-width:240px;
+		margin:0 0 5px;
+		h2 {
+			font-size:.875em;
+		}
+		p {
+			font-size:.812em;
+		}
+	}
+	/* 联系 消息提示 */
+	.prompt {
+		top:70%;
+	}
+}
+
+
