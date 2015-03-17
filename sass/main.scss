@@ -82,6 +82,7 @@
 	.box {
 		position:relative;
 		height:$height;
+		overflow:hidden;
 		background:url(./image/box-bg1.jpg) center bottom fixed;
 		background-size:cover;
 		&.box2, &.box4 {
